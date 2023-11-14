@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head> <!--this tag is a container for metadata-->
+	<meta name="viewport" content="with=device-width, initial-scale=1.0"> <!--fixing the width to the device width-->
+	<title>GreenTeam</title> <!--title of the page which apperes in the top of the tap-->
+	<link rel="stylesheet" href="GreenC.css"> <!-- linking the CSS to the HTML-->
+	<!--giving a uniform font for the whole website-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+</head>
+<body>
+	
+	
+	<!------------------------Section 1----------------------->
+	<section class="header">  <!--naming the class as header -->
+		<nav> <!--defines a set of navigation links-->
+			<a href="GreenH.html"> <img src="../imgs/logo.png"></a> <!--inserting the logo-->
+			<div class="nav-links" id="navLinks"> <!--div tag or divsion section-->
+				<img src="../icons/close.png" class="gg" onclick="hidemenu()"> <!--onclick is where we start writing html to react to the icon closing-->
+			  <ul> 
+				  <!--creating links to other webpages-->
+			  <li> <a href="GreenH.html">HOME</a></li>
+				  <li> <a href="AboutUs.html">ABOUT</a></li>
+				  <li> <a href="Contact.html">CONTACT US</a></li>
+				  <li> <a href="Subscription.html">SUBSCRIBTION</a></li>
+				  <li> <a href="Visit.html">VISIT US</a></li>
+			  </ul>
+			</div> 
+			<img src="../icons/3bars.png" class="gg" onclick="showmenu()">
+			<!--react to the menu icon to be showed-->
+		</nav>
+		<div class="text-box"> <!--div tag or divsion section with class name of textbox-->
+			<h1>Recycle Today for a Better Tomorrow</h1> <!--the main title-->
+			<p>Every piece of plastic ever made, Still exists today !<br> Recycle with Us, Save the Environment, Reuse the Recources and Earn Money.
+		    </p> <!--paragraph-->
+			<a href="Visit.html" class="hero-btn">Visit Us To Know More</a> <!--link using anchor tag with a class name of hero-btn-->
+  			<!-- <a> (anchor element), with its href attribute, creates a hyperlink to web pages-->
+		</div>		
+	</section> 
+	
+	
+	<!------------------------Section 2----------------------->
+	<section class="whyGreenTeam">
+		<h1> Why recycle with GreenTeam? </h1>
+		<div class="row">
+			<div class="col">
+				<h3> Save the Environment </h3>
+				<p> Recycling helps to reduce the pollution caused by the extraction and processing of virgin materials </p>
+			</div>
+			<div class="col">
+				<h3> Reuse the Recources </h3>
+				<p> Instead of throwing away and destroying the plastic, we can use it again, thus gaining more resources for manufacturing. </p>
+			</div>
+			<div class="col">
+				<h3> Earn Money </h3>
+				<p> Earn money from every kilogram of plastic you used to throw in the garbage, now give it to us and get money for it. Sounds good right? </p>
+			</div>
+		</div>
+	</section>
+	
+	
+	<!-----------------------Section 3----------------------->
+	<section class="howGreenTeam">
+		<h1> How to recycle with GreenTeam? </h1>
+		<div class="row">
+			<div class="hcol">
+				<img src="../imgs/stage1.jpg">
+				<div class="layer">
+					<p>Stage I <br><br> Subscribing and receiving the Bin</p>
+				</div>
+			</div>
+			<div class="hcol">
+				<img src="../imgs/stage2.jpg">
+				<div class="layer">
+					<p> Stage II <br><br> Collecting plastic in the Bin</p>
+				</div>
+			</div>
+			<div class="hcol">
+				<img src="../imgs/stage3.jpg">
+				<div class="layer">
+					<p> Stage III <br> <br> Giving the recycled and getting cash</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	
+	<!----------------------Section 4--------------------------->
+	<section class="achievements">
+		<h1>What did we achieve?</h1>
+	  	  <div class="row">
+			<div class="acol">
+				<img src="../imgs/ach.jpg">
+				<div>
+					<p> We recycle about <b> 36 million ton per year</b>. If this huge number was not recycled, it could have contributed to an increase in pollution and environmental problems significantly.
+					</p>
+				</div>
+			</div>
+			  
+			<div class="acol">
+				<img src="../imgs/ach2.jpg">
+				<div>
+					<p> Many of our customers have achieved a constant additional income by dealing with us, up to <b>$500</b> annually. Some other companies who deal with plastic waste regularly are gaining way more!
+					</p>
+				</div>
+			</div>
+		  </div>
+	</section>
+	
+	
+		
+	<!----------------------Section 5--------------------------->
+		<section class="calculator">
+			
+			<h1>Calculate My profit</h1>
+			<br><br><br>
+			<p>Enter the plastic mass to know the price in OMR:</p>
+
+			<p>
+			  <input id="inputFeet" type="number" placeholder="Kg" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+			</p>
+			<p>Price:  <span id="outputMeters" ></span> OMR</p>
+
+			<script>
+			function LengthConverter(valNum) {
+			  document.getElementById("outputMeters").innerHTML=valNum*0.15;
+			}
+			</script>
+		</section>
+	
+	
+	<!----------------------Section 6--------------------------->
+	<section class="footer">
+		<h4> About Us</h4>
+		<p> To know more about our team, head to <b>about</b> page from the navigation bar. To subscribe, head to <b>subscribtion</b> page from the navigation bar. After filling your information, you will get an Email to confirm the registration. Then we will reach out to you to give you the Bin that you will collect the plastic in. The bin is somewhat special, it can compress the plastic to contain more items. If the Bin is filled update the status and our truck will come over, weigh the Bin and give you the corresponding cash. To update the status, head to <b>Update Status</b> page from the navigation bar.</p>
+		
+			<div class="icons">
+				<img src="../icons/SocialMedia.png">	
+			</div>
+	</section>
+	
+	
+
+	<!----------javascript code to move the toggle menu---------> 
+	<script> 
+		var navLinks = document.getElementById("navLinks");
+			function showmenu(){
+			navLinks.style.right = "0";
+			}
+			function hidemenu(){
+			navLinks.style.right = "-250px";
+		    }
+	</script>
+</body> 
+</html> 
+
+
+		  

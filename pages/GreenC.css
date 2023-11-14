@@ -1,0 +1,437 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif; /*giving a uniform font for the whole website*/
+}
+
+.header{ /*styling header class*/
+	min-height: 100vh; /* minimum hight is 100 viewport height*/
+	width: 100%;
+	background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url("../imgs/Background1.jpg");
+	background-position: center;
+	background-size: cover;
+	position: relative; 
+	
+}
+nav{ /*setting propereties for the nav tag*/
+	display: flex; /*flex container expands items to fill available free space or shrinks them to prevent overflow*/
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+	
+	
+}
+nav img{ /*setting propereties for the image in the nav tag*/
+	width: 130px;	
+}
+.nav-links{ /*setting propereties for the nav-links*/
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px; /*internal space between the links*/
+	position: relative;
+}
+.nav-links ul li{ /*setting propereties for the navigation bar lists*/
+    list-style: none;
+	display: inline-block;
+	padding: 8px 12px; 
+	position: relative;
+}
+.nav-links ul li a{ /*setting propereties for the font of the navigation bar*/
+	color: #fff;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.nav-links ul li::after{ /*setting propereties for the navigation bar design*/
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #4CAF50;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+.nav-links ul li:hover::after{ /*creating effects for the navigation bar design after hovering with the curser over it*/
+	width: 100%
+}
+.text-box{ /*setting propereties for the text in the top*/
+	width: 90%;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.text-box h1{ /*setting font propereties for h1 in the text-box*/
+	font-size: 62px;
+}
+.text-box p{ /*setting font propereties for p in the text-box*/
+	margin: 10px 0 40px;
+	font-size: 14px;
+	color: #fff;
+}
+.hero-btn{ /*setting propereties for the botten*/
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 12px 34px;
+	font-size: 13px;
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+}
+.hero-btn:hover{ /*creating effects for the button design after hovering with the cursor over it*/
+	border: 1px solid #4CAF50;
+	background: #4CAF50;
+	transition: 1s;	
+}
+nav .gg{ /*icons to the mobile users*/
+	display: none; /*To hide icons for the discktop users*/
+}
+@media(max-width: 700px){ /*To be aplicable on smaller devices*/
+	.text-box h1{
+		font-size: 20px;
+	}
+	.nav-links ul li{ /*To create a block that contains the ul li*/
+		display: block;
+	}
+	.nav-links{ /*style of the block that ciontain ul li (toggle bar)*/
+		position: fixed;
+		background: #4CAF50;
+		height: 100vh;
+		width: 200px;
+		top: 0;
+		right: -200px; /*initially hiding the nav links and showing them later after pressing on the 3 bars*/
+		text-align: left;
+		z-index: 2; /* sets the z-order of a positioned element and its descendants or flex items*/
+		transition: 1s; /*adding transition to the toggle bar*/
+	}
+	nav .gg{ /*To display the icons for mobile users because we have hidden it previosly*/
+		display:block;
+		margin: 10px;
+		cursor: pointer;
+		height: 15px;
+		width: 15px;
+	}
+	
+	.nav-links ul{
+		padding:  30px;
+	}
+}
+
+/*-------whyGreenTeam-------*/
+.whyGreenTeam{
+	width: 80%;
+	margin:auto;
+	text-align: center;
+	padding-top: 100px;
+}
+h1{ 
+	font-size: 36px;
+	font-weight: 600;
+}
+p{
+	color: #777;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 10px;
+}
+.row{ /*Styling the row*/
+	margin-top: 5%;
+	display: flex; 
+	justify-content: space-between;
+}
+
+.col{ /*Styling the colomns*/
+	flex-basis: 31%;
+	background:#B2E4B5;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 20px 12px;
+	box-sizing: border-box;
+	transition: 1s;
+}
+h3{ 
+	text-align: center;
+	font-weight: 600;
+	margin: 10px 0;
+}
+.col:hover{ /*adding effect while hovering over the section*/
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width: 700px){ /*to be aplicable for smaller devices*/
+	.row{
+		flex-direction: column; /*letting the sections be vertical*/
+	}
+}
+
+/*----------howGreenTeam----------*/
+.howGreenTeam{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.hcol{ /*Styling the colomns*/
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+	
+}
+.hcol img{
+	width: 100%;
+	display: block;
+}
+
+.layer{
+	background: transparent;
+	height: 100%;
+	width: 100%;
+	position:absolute;
+	top: 0;
+	left: 0;
+	transition: 1s;
+}
+.layer:hover{ /*adding effect while hovering over the section*/
+	background: rgba(76,175,80,0.7);
+}
+
+.layer p {
+	width: 100%;
+	font-weight: 300;
+	color: #FFF;
+	font-size: 18px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	opacity: 0;
+	transition: 1s;
+}
+
+.layer:hover p{
+	bottom: 49%;
+	opacity: 1;
+}
+
+/*---------achievements--------*/
+.achievements{
+	width: 80%;
+	margin: auto;
+	padding-top: 100px;
+	text-align: center;
+}
+
+.acol{
+	flex-basis: 44%;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	text-align: left;
+	background: #B2E4B5;
+	padding: 25px;
+	display: flex;
+}
+
+.acol img{
+	height: 100px;
+	margin-left: 5px;
+	margin-right: 30px;
+	border-radius: 20px;
+	
+}
+.acol p{
+	padding: 0;
+}
+
+
+/*----------moreinfo----------*/
+.moreinfo{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+	
+}
+
+/*---------footer------------*/
+.footer{
+	width: 100%;
+	text-align: center;
+	padding: 30px 0;
+}
+
+.footer h4{
+	margin-bottom: 25px;
+	margin-top: 20px;
+	font-weight: 600;
+}
+
+/*--------About Us-----------*/
+.subheader{
+	height: 50vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url("../imgs/Background2.jpg");
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+}
+
+.subheader h1{
+	margin-top: 30px;
+}
+
+.aboutus{
+	width: 80%;
+	margin: auto;
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+
+.aboutcol{
+	flex-basis: 48%;
+	padding: 30px 2px;
+}
+
+.aboutcol img{
+	width: 100%;
+	border-radius: 5px;
+}
+
+.aboutcol h1{
+	padding-top: 0;
+}
+
+.aboutcol p{
+	padding: 15px 0 25px;
+}
+
+.green-btn{
+	border: 1px solid #4CAF50;
+	background: transparent;
+	color: #4CAF50;
+}
+
+.green-btn:hover{
+	color: #fff;
+}
+
+/*--------contact-----------*/
+.CommentBox{
+	border: 1px solid #ccc;
+	margin: 50px 0;
+	padding: 10px 20px;
+}
+.CommentBox h3{
+	text-align: left;
+}
+
+.CommentForm input, .CommentForm textarea{
+	width: 100%;
+	padding: 10px;
+	margin: 15px 0;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	background: #f0f0f0;
+}
+
+.CommentForm button{
+	margin: 10px 0;
+}
+
+/*--------calculator-----------*/
+.calculator{
+	text-align: center;	
+	width: 80%;
+	margin: auto;
+	padding-top: 100px;
+}
+.calculator input{
+	width: 30%;
+	padding: 10px;
+	margin: 15px 0;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	background: #f0f0f0;
+}
+
+/*--------Subscription-----------*/
+.location{
+	width: 80%;
+	margin: auto;
+	padding: 80px 0;
+}
+
+.location iframe{
+	width: 100%;
+}
+
+.locationt{
+	text-align: center;
+	padding-bottom: 30px;
+}
+.subscribe{
+	width:80%;
+	margin-bottom: 30px;
+}
+.subscribe h3{
+	
+}
+
+.contactcol{
+	flex-basis: 48%;
+	margin-bottom: 30px;
+	
+}
+
+.contactcol div{
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+	padding-left: 25%;
+}
+
+.contactcol div p{
+	padding: 0;
+}
+
+.contactcol div h5{
+	font-size: 20px;
+	margin-bottom: 5px;
+	color: #555;
+	font-weight: 400;
+}
+
+.contactcol input, .contactcol textarea{
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 17px;
+	outline: none;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+
+/*--------icons-----------*/
+.icons img{
+	cursor: pointer;
+	height: 30px;
+}
+
+
+
+
+
+
+
+
+
+

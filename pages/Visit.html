@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head> <!--this tag is a container for metadata-->
+	<meta name="viewport" content="with=device-width, initial-scale=1.0"> <!--fixing the width to the device width-->
+	<title>GreenTeam</title> <!--title of the page which apperes in the top of the tap-->
+	<link rel="stylesheet" href="GreenC.css"> <!-- linking the CSS to the HTML-->
+	<!--giving a uniform font for the whole website-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+</head>
+<body>
+	
+	
+	<!------------------------Section 1----------------------->
+	<section class="subheader"> 
+		<nav> <!--defines a set of navigation links-->
+			<a href="GreenH.html"> <img src="../imgs/logo.png"></a> <!--inserting the logo-->
+			<div class="nav-links" id="navLinks"> <!--div tag or divsion section-->
+				<img src="../icons/close.png" class="gg" onclick="hidemenu()">  <!--onclick is where we start writing html to react to the icon closing-->
+			  <ul> 
+				  <!--creating links to other webpages-->
+				  <li> <a href="GreenH.html">HOME</a></li>
+				  <li> <a href="AboutUs.html">ABOUT</a></li>
+				  <li> <a href="Contact.html">CONTACT US</a></li>
+				  <li> <a href="Subscription.html">SUBSCRIBTION</a></li>
+				   <li> <a href="Visit.html">VISIT US</a></li>
+			  </ul>
+			</div> 
+			<img src="../icons/3bars.png" class="gg" onclick="showmenu()"> 
+			<!--react to the menu icon to be showed-->
+		</nav>
+		<h1>VISIT US</h1>
+	</section> 
+	
+	
+	
+	<!----------------------Section 2 --------------------------->
+		<section class="location">
+		<h2 class="locationt">Our Location</h2>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.983855723817!2d58.216651715028505!3d23.640749198873085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8dfc9369db9d95%3A0x57afe2923c208e99!2sNational%20University%20of%20Science%20and%20Technology%20(College%20of%20Engineering%2C%20Caledonian%20Campus)!5e0!3m2!1sen!2som!4v1652219452461!5m2!1sen!2som" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</section>
+	
+	
+	
+	<!----------------------Section 3 --------------------------->
+	<section class="footer">
+		<h4> About Us</h4>
+		<p> To subscribe, head to <b>subscribtion</b> page from the navigation bar. After filling your information, you will get an Email to confirm the registration. Then we will reach out to you to give you the Bin that you will collect the plastic in. The bin is somewhat special, it can compress the plastic to contain more items. If the Bin is filled update the status and our truck will come over, weigh the Bin and give you the corresponding cash. To update the status, head to <b>Update Status</b> page from the navigation bar.</p>
+		
+				<div class="icons">
+			<img src="../icons/SocialMedia.png">
+		</div>
+	</section>
+	
+
+	
+	<!----------javascript code to move the toggle menu---------> 
+	<script> 
+		var navLinks = document.getElementById("navLinks");
+			function showmenu(){
+			navLinks.style.right = "0";
+			}
+			function hidemenu(){
+			navLinks.style.right = "-250px";
+		    }
+	</script>
+</body> 
+</html> 
+
+
+		  
